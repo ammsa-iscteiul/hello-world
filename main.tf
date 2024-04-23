@@ -54,7 +54,7 @@ resource "random_integer" "sa_num" {
 
 resource "azurerm_resource_group" "setup" {
   name     = local.resource_group_name
-  location = var.location
+  location = var.resource_group_location
 }
 
 
