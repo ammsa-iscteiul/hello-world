@@ -38,11 +38,11 @@ resource "azuread_service_principal_password" "gh_actions" {
   service_principal_id = azuread_service_principal.gh_actions.object_id
 }
 
-resource "azurerm_role_assignment" "gh_actions" {
-  scope                = data.azurerm_subscription.current.id
-  role_definition_name = "Contributor"
-  principal_id         = azuread_service_principal.gh_actions.id
-}
+#resource "azurerm_role_assignment" "gh_actions" {
+#  scope                = data.azurerm_subscription.current.id
+#  role_definition_name = "Contributor"
+#  principal_id         = azuread_service_principal.gh_actions.id
+#}
 
 
 
